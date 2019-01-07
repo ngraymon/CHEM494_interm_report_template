@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%      TITLE PAGE     %%%%%%%%%%%%%%%%
+\usepackage[british]{datetime2}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% all of these dimensions assume that the margins are 1 inch
+\newlength{\upperverticalspacing} % for my convenience
+\newcommand*{\maketitlepage}{\begingroup% Gentle Madness
+\upperverticalspacing = 0.01\textheight
+\vspace*{\baselineskip}
+\vfill
+    \hbox{%
+    \hspace*{0.2\textwidth}%
+    \rule{1pt}{\textheight}
+    \hspace*{0.05\textwidth}%
+    \parbox[b]{0.75\textwidth}{
+    \vbox{%
+        \vspace{\upperverticalspacing}
+        {\noindent\Huge\bfseries    Title\\[0.5\baselineskip]
+                                    of the report\\[0.5\baselineskip]
+                                    }\\[1\baselineskip]
+        {\Large\itshape Subtitle\\[0.5\baselineskip]
+                        of the report}\\[4\baselineskip]
+        {\Large Your name}\\[1\baselineskip]
+        {\normalsize Supervisor(s): Their name(s)}\\[0.5\baselineskip]
+        {\normalsize Submitted in partial fulfillment of CHEM 494}\par
+        \vspace{0.5\textheight}
+        {\noindent University of Waterloo}\\{\noindent \today }\\[\baselineskip]%\DTMdisplaydate{2016}{03}{18}{-1}
+        }% end of vbox
+        }% end of parbox
+    }% end of hbox
+\vfill
+\null
+\endgroup}
+%%%%%%%%%%%%%%%%      TITLE PAGE     %%%%%%%%%%%%%%%%

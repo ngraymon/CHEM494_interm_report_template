@@ -1,0 +1,103 @@
+\documentclass[12pt, letterpaper, oneside]{article}  % define the basic details of our document
+% ------------------------------------------------------------------------------------------------------------
+\input{prelude}      % all the document preperation is inside this file
+% ------------------------------------------------------------------------------------------------------------
+\usepackage{lipsum}  % just to provide filler text for template spacing
+\usepackage{mwe}     % just to provide filler images
+% ------------------------------------------------------------------------------------------------------------
+\graphicspath{{./images/}} % look inside ./Images relative to the location of the main .tex file
+\addbibresource{references.bib}
+% ------------------------------------------------------------------------------------------------------------
+
+% The report should provide an introduction to your research project, complete with a bibliography of relevant material. Although the bibliography will be less extensive than what you will have in your final report, you should have done enough background reading to have a good grasp of your research project. There is no requirement in January to have final results. The format for the report should be a research proposal, where you outline the nature of your research project, the background to it from the literature, the techniques you will use for your research, and the results you hope to obtain. The detailed format is between you and your supervisor, but would suggest the report be a maximum of 10 pages total, including a brief summary (200 words), references, and figures. Text should be double spaced, 12 point type. You must submit the report on LEARN as a pdf document by the due date. A paper copy is no longer required.
+
+% ------------------------------------------------------------------------------------------------------------
+\maketitlepage \pagestyle{empty} % this creates the title page
+\begin{document}
+\clearpage \doublespacing \pagestyle{plain}
+% ------------------------------------------------------------------------------------------------------------
+\section*{Acknowledgements} % (optional)
+% Acknowledge the assistance of the research supervisor and any other faculty members, graduate students, departmental members and others who have been especially helpful with any aspect of the project.
+\lipsum[39]
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section*{Summary}
+% The next page should be a Summary (200 words), not normally more than half a page, concisely summarizing what is being presented in the report. The Summary will highlight any important features discovered or determined.
+Here is some example text.
+This is an equation:
+\begin{equation}\label{eq:template}
+    x \times 2 = x + x.
+\end{equation}
+Here is an example table:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ l c r }
+        \toprule
+        x & y & z \\
+        \midrule
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9 \\
+        % \botrule
+    \end{tabular}
+    \caption{\label{table:one} Computational Parameters.}
+\end{table}\\
+Here is a reference~\cite{goodfellow1990molecular}, and another reference~\cite{schmidt2014inclusion}, and 3 different references at once~\cite{sarsa2000path,constable2013langevin,goodfellow1990molecular}.
+This is how I would refer back to \cref{eq:template}, and how I reference \cref{table:one}.\\
+The rest of the document has filler example text using the lipsum package.
+\newpage
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Background}
+% here are some example sub headings
+\subsection{Vibronic coupling}
+\lipsum[53-55]
+\subsection{Wavefunctions}
+\lipsum[58-60]
+\subsection{Real time propagation}
+\lipsum[62-64]
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Proposal}
+\subsection{First part of proposal}
+\lipsum[47-50]
+\subsection{A possible second part of the proposal}
+\lipsum[47-50]
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Preliminary Results}
+
+\lipsum[41]
+
+\begin{figure}[!h]
+    \center
+    \includegraphics[width=0.8\columnwidth]{example-image}
+    \caption{\label{fig:one}caption of image}
+\end{figure}
+
+\lipsum[70-72]
+
+\begin{figure}
+    \center
+    \includegraphics[width=1.0\linewidth]{example-image}
+    \caption{\label{fig:two}caption of another image}
+\end{figure}
+
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Concluding Remarks}
+\lipsum[80-81]
+\newpage%
+
+
+\renewcommand*{\bibfont}{\scriptsize}
+\printbibliography
+\end{document}
